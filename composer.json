@@ -1,0 +1,31 @@
+{
+    "name": "barstec/laravel-paypal-payment-ipn",
+    "description": "Package for easily integrating paypal payments via html buttons with Laravel and IPN verification.",
+    "keywords": ["laravel", "paypal", "framework", "api", "package", "payments", "ipn"],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Bartłomiej Stec"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Barstec\\Paypal\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Barstec\\Paypal\\PaypalServiceProvider"
+            ],
+            "aliases": {
+                "Paypal": "Barstec\\Paypal\\PaypalFacade"
+            }
+        }
+    }
+}
